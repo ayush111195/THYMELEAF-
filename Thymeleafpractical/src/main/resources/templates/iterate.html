@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>	//HANDLING ITERATION---->>>
+	</title>
+</head>
+<body>
+	<h1>GOING TO TRAVERSE ELEMENTS IN COLLECTION....</h1>
+	<h2 th:text="${listofname}"></h2>
+	
+	<ul>
+	<li th:each="n,status: ${listofname}">
+	<span th:style="${status.odd} ? 'font-weight:bold' : ' ' " th:text="${status.index}+''+${n}"> </span>
+	</li>
+	<!-- index: the current iteration index , starting with 0(zero)
+	     count: the number of elements processed so far
+	     size: the total number of elements in the list
+	     even/odd: checks if the current iteration index is even or odd
+	     first: check if the current iteration is the first one 
+	     last:check if the current iteration is the last one  --> 
+	</ul>
+</body>
+</html>

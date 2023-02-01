@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org" >
+<head>
+
+<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>ABOUT  LEARNCODE WITH AYUSH</h1>
+	<h2>WE ARE LEARNING SPRINGBOOT </h2>
+	<h3 th:text="${ #strings.toUpperCase(name)}" ></h3>
+	<h3 th:text="${currentDate}" ></h3>
+	
+	<div th:with="a=5, b=67, n=${name}">
+	<h1> value of a is <span th:text="${a}"></span> </h1><!-- SPAN KA USE PRINT KARNE KE LEYE HOTA H -->
+	</div>
+</body>
+</html>
